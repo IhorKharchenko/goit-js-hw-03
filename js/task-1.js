@@ -1,28 +1,27 @@
-const getItemsString = function (array) {
-  "use strict";
-  // Write code under this line
-  let result = "";
-  for (let i = 1; i <= array.length; i += 1) {
-    result += `${i} - ${array[i - 1]}\n`;
-  }
-  return result;
+let message = "";
+const user = {
+  age: 20,
+  hobby: "html",
+  name: "Mango",
+  premium: true,
 };
 
-console.log(getItemsString(["Mango", "Poly", "Ajax", "Lux", "Jay", "Kong"]));
+//Write code under this line
+user.mood = "happy";
+user["full time"] = true;
+user.hobby = "skydiving";
+user.premium = false;
+const keys = Object.keys(user);
+// Write code under this line
+for (const key of keys) {
+  message += `${key}: ${user[key]}\n`;
+}
+console.log(message);
 /*
-'1 - Mango
-2 - Poly
-3 - Ajax
-4 - Lux
-5 - Jay
-6 - Kong
-'
-*/
-
-console.log(getItemsString([5, 10, 15]));
-/*
-'1 - 5
-2 - 10
-3 - 15
-'
-*/
+'age : 20 
+hobby : skydiving 
+name : Mango 
+premium : false 
+mood : happy 
+"full time" : true 
+' */
